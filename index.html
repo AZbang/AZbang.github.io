@@ -5,6 +5,9 @@
 	<title>Document</title>
 	
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js"></script>
+
 	<link href='https://fonts.googleapis.com/css?family=Comfortaa&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -34,6 +37,16 @@
 				<section id="role-canvas" class="section-articles">
 					<h1 class="name-section">Какую роль в современном вебе играет Canvas?</h1>
 					<div class="wrap-section">
+						<a class="link-article" href="http://beloweb.ru/novichkam/10-krutyih-primerov-rabotyi-html5-canvas.html">Статья про 10 великолепных эффектов на canvas</a>
+
+						<a class="link-article" href="http://www.goodboydigital.com/pixijs/pixilights/">
+							Замечательная убивалка времени на Pixi.js
+							<img src="img/game.png" height="300" width="470" alt="game">
+						</a>
+						<a class="link-article" href="http://www.harmogram.com">
+							Красивый плеер на Paper.js
+							<img src="img/game2.png" height="250" width="470" alt="game">
+						</a>
 					</div>
 				</section>
 				<section id="ie-shit" class="section-articles">
@@ -42,22 +55,134 @@
 					</div>
 				</section>
 				<section id="canvas-api" class="section-articles">
-					<h1 class="name-section">Canvas API</h1>					
+					<h1 class="name-section">Canvas API</h1>
+
 					<div class="wrap-section">
+					<p>Нарисуем прямоугольники:</p>
+
+					<figure class="example">
+						<pre>
+<code>var canvas = document.getElementById('paper');
+var ctx = canvas.getContext('2d');
+
+ctx.fillStyle = 'yellow'; // fill
+ctx.strokeStyle = '#FF9600'; // stroke
+
+ctx.lineWidth = 4; // stroke
+
+// rectangle
+ctx.fillRect(100, 100, 150, 150); // fill
+ctx.strokeRect(100, 100, 150, 150); // stroke
+
+// path
+ctx.rect(300, 150, 100, 100); //rectangle area
+ctx.rect(450, 200, 50, 50); //rectangle area
+
+ctx.fill(); // fill
+ctx.stroke(); // stroke</code>
+						</pre>
+						<a href="http://codepen.io/AZbang/pen/dXOLNj">
+							<img src="img/examples-img/rect.png" height="231" width="476" alt="circle">
+						</a>
+					</figure>
+					
+					<p>Нарисуем круги:</p>
+					<figure class="example">
+						<pre>
+<code>var canvas = document.getElementById('paper');
+var ctx = canvas.getContext('2d');
+
+canvas.width = 800;
+canvas.height = 600;
+
+// STYLE
+ctx.fillStyle = 'yellow'; // fill
+ctx.strokeStyle = '#FF9600'; // stroke
+ctx.lineWidth = 4; // stroke
+
+// DRAW CIRCLE
+ctx.beginPath(); // next path
+ctx.arc(400, 200, 150, 0, 2*Math.PI);
+ctx.fill(); // fill
+ctx.stroke(); // stroke
+
+ctx.beginPath(); // next path
+ctx.arc(700, 200, 50, 0, 2*Math.PI);
+ctx.fill(); // fill
+ctx.stroke(); // stroke</code>
+						</pre>
+
+						<a href="http://codepen.io/AZbang/pen/QEGYPx">
+							<img src="img/examples-img/circle.png" height="270" width="450" alt="circle">
+						</a>
+					</figure>
+					<a class="link-article" href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D">Полная документация на Mozila Devaloper</a>
 					</div>
 				</section>
 				<section id="raf" class="section-articles">
-					<h1 class="name-section">RequestAnimationFrame</h1>					
+					<h1 class="name-section">Анимации</h1>
+
 					<div class="wrap-section">
+						<figure class="example">
+						<pre>
+<code>var canvas = document.getElementById('paper');
+var ctx = canvas.getContext('2d');
+
+// STYLE
+ctx.fillStyle = 'yellow'; // fill
+ctx.strokeStyle = '#FF9600'; // stroke
+ctx.lineWidth = 4; // stroke
+
+var x = 400;
+var y = 300;
+var r = 30;
+var count = 0;
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath(); // next path
+  ctx.arc(x, y, r, 0, 2*Math.PI);
+  ctx.fill(); // fill
+  ctx.stroke(); // stroke
+}
+
+function update() {
+  count += 0.1;
+  x += Math.sin(0.2) * 10;
+  y += Math.cos(count) * 5;
+  
+  if(x > canvas.width + r) x = -r;
+}
+
+function loop() {
+  update();
+  draw();
+  
+  requestAnimationFrame(loop)
+}
+
+loop();</code>
+							</pre>
+
+							<a href="http://codepen.io/AZbang/pen/yJVdbW">
+								<img src="img/examples-img/raf.gif" height="330" width="430" alt="animation">
+							</a>
+						</figure>
+
+						<a class="link-article" href="https://gist.github.com/paulirish/1579671">Polyfill RequestAnimationFrame</a>
 					</div>
 				</section>
 				<section id="canvas-lib" class="section-articles">
 					<h1 class="name-section">Делаем жизнь проще</h1>					
 					<div class="wrap-section">
+						<a class="link-article" href="http://www.pixijs.com">Pixi.js</a>
+						<a class="link-article" href="http://www.pixijs.com">Paper.js</a>
+
+						<a class="link-article" href="http://www.pixijs.com">Другие</a>
 					</div>
 				</section>
 				<section id="test" class="section-articles">
-					<h1 class="name-section">Тест Производительности</h1>					
+					<h1 class="name-section">Тест Производительности</h1>
 					<div class="wrap-section">
 						<a class="link-article" href="./testFPS/CanvasTest/index.html">Тест чистого Canvas без сторонних фреймворков и библиотек</a>
 						<a class="link-article" href="./testFPS/PaperTest/index.html">Тест Canvas на фреймворке Paper.js</a>
@@ -74,5 +199,8 @@
 
 	<script src="js/jquery.js"></script>
 	<script src="js/navigation.js"></script>
+
+	<!-- Syntax highlight -->
+	<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

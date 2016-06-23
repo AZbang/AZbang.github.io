@@ -6,4 +6,5 @@
 ***
 
 Подготовил **Андрей Жевлаков**
+
 Группа в VK - [IndieGamesAZ](http://vk.com/indiegamesaz)

@@ -23,7 +23,7 @@
 				<ul class="docs-nav">
 					<li href="main-header">Вверх</li>
 					<li href="role-canvas">Роль Canvas</li>
-					<li href="role-canvas">Поддержка браузеров</li>
+					<li href="ie-shit">Поддержка браузеров</li>
 					<li href="canvas-api">Canvas API</li>
 					<li href="raf">RequestAnimationFrame</li>
 					<li href="canvas-lib">Библиотеки и фреймворки</li>
@@ -52,6 +52,13 @@
 				<section id="ie-shit" class="section-articles">
 					<h1 class="name-section">Поддержка браузеров</h1>
 					<div class="wrap-section">
+						<p>IE 9.0+</p>
+						<p>Firefox 3.0+</p>	
+						<p>Safari 3.0+</p>
+						<p>Chrome 3.0+</p>
+						<p>Opera 10.0+</p>
+						<p>iOS 3.0+</p>
+						<p>Android 1.0+</p>
 					</div>
 				</section>
 				<section id="canvas-api" class="section-articles">
@@ -116,6 +123,47 @@ ctx.stroke(); // stroke</code>
 							<img src="img/examples-img/circle.png" height="270" width="450" alt="circle">
 						</a>
 					</figure>
+
+					<p>Рисуем линиями:</p>
+					<figure class="example">
+						<pre>
+<code>var canvas = document.getElementById('paper');
+var ctx = canvas.getContext('2d');
+canvas.width = 800;
+canvas.height = 600;
+
+// STYLE
+ctx.fillStyle = 'yellow'; // fill
+ctx.strokeStyle = '#FF9600'; // stroke
+ctx.lineWidth = 4; // stroke
+var offset = 100;
+
+ctx.beginPath();
+ctx.moveTo(offset + 50,  offset+50);
+ctx.lineTo(offset + 100,  offset+50);
+ctx.lineTo(offset + 150, offset+100);
+ctx.lineTo(offset + 150, offset+150);
+ctx.lineTo(offset + 100, offset+200);
+ctx.lineTo(offset + 50, offset+200);
+ctx.lineTo(offset + 0, offset+150);
+ctx.lineTo(offset + 0, offset+100);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(offset + 300,  offset+50);
+ctx.lineTo(offset +350,  offset+200);
+ctx.lineTo(offset +250,  offset+200);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();</code>
+							</pre>
+
+							<a href="http://codepen.io/AZbang/pen/OXWXpv">
+								<img src="img/examples-img/shapes.png" height="208" width="400" alt="shapes">
+							</a>
+						</figure>
 					<a class="link-article" href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D">Полная документация на Mozila Devaloper</a>
 					</div>
 				</section>
@@ -177,8 +225,6 @@ loop();</code>
 					<div class="wrap-section">
 						<a class="link-article" href="http://www.pixijs.com">Pixi.js</a>
 						<a class="link-article" href="http://www.pixijs.com">Paper.js</a>
-
-						<a class="link-article" href="http://www.pixijs.com">Другие</a>
 					</div>
 				</section>
 				<section id="test" class="section-articles">

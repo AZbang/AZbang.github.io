@@ -1,10 +1,11 @@
-# MeetUp
+# Home Page
 
-Моя презентация на **GC MeetUp** о технологии canvas.
+## Directory Site
 
-Сайт - https://azbang.github.io
-***
+* **Official Page - https://azbang.github.io**
+* **Canvas Tutorial - https://azbang.github.io/host/canvas**
 
-Подготовил **Андрей Жевлаков**
+Group in VK - [AZbang | Web Development](http://vk.com/azbang)
 
-Группа в VK - [IndieGamesAZ](http://vk.com/indiegamesaz)
+Author **Andrey Zhevlakov**
+

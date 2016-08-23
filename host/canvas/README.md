@@ -4,6 +4,6 @@
 
 Сайт - https://azbang.github.io
 ***
-
 Подготовил **Андрей Жевлаков**
+
 Группа в VK - [IndieGamesAZ](http://vk.com/indiegamesaz)

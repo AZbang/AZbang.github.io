@@ -1,0 +1,138 @@
+/* CUSTOM HLJS */
+.hljs {
+	color: rgb(70, 70, 70);
+}
+.hljs-string, .hljs-type, .hljs-built_in, .hljs-builtin-name, .hljs-selector-id, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-addition, .hljs-variable, .hljs-template-variable {
+    color: rgb(230, 152, 116);
+}
+.hljs-params, .hljs-class .hljs-title {
+    color: rgb(247, 142, 181);
+}
+
+
+/* BASE */
+a {
+	color: #3892FF;
+	text-decoration: none;
+}
+a:hover, a:focus {
+    text-decoration: none;
+}
+::selection {
+	background: rgba(239, 165, 92, 0.4);
+}
+
+/* UTILS */
+.block {
+	width: 70%;
+	position: absolute;
+	top: 70px;
+	left: 50%;
+	margin-left: -35%;
+	filter: blur(0px);
+	transition: 1s all;
+	z-index: 1000;
+}
+.hide {
+	display: none;
+}
+.code-blur {
+	filter: blur(20px);
+	z-index: 1;
+}
+.code-blur .zoom {
+	font-size: 60px;
+}
+
+.content-blur {
+	filter: blur(30px);
+	width: 90%;
+	margin-left: -45%;
+	z-index: 1;
+}
+
+
+/* CODE BLOCK */
+.hljs {
+	font-size: 20px;
+	font-weight: bold;
+	font-family: 'Handlee', cursive;
+	background: transparent;
+	transition: 0.01s font-size;
+}
+#cursor {
+	margin-left: 2px;
+}
+
+
+
+/* INFO BLOCK */
+#info h1 {
+	margin-bottom: 0;
+	font-size: 35px;
+}
+#info p {
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+/* CONTENT BLOCK*/
+#content {
+	font-family: 'PT Sans Narrow', cursive;
+}
+
+/* PROJECTS LIST */
+.project {
+	height: 605px;
+	margin-bottom: 20px;
+	transition: .3s padding-bottom;
+}
+
+/* image project */
+.img {
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: 50% 50%;
+    border: 2px solid rgb(90, 90, 90);
+}
+/* label project*/
+.project span {
+	font-size: 40px;
+	margin-right: 10px;
+}
+/* description project */
+.project p {
+	font-size: 20px;
+    border-bottom: 3px solid rgb(90, 90, 90);
+    padding: 0 10px 15px;
+    height: 385px;
+}
+
+
+/* CONTACT LIST */
+#contacts {
+	list-style-type: none;
+	width: 177px;
+	padding: 0;
+	margin: 15px auto;
+	overflow: hidden;
+}
+#contacts li {
+	float: left;
+	font-size: 2.6em;
+	cursor: pointer;
+	margin-left: 10px;
+
+}
+#contacts li:hover {
+	color: #3892FF;
+}
+
+/* custom size icons */
+.fa-telegram {
+	font-size: 0.8em;
+}
+.fa-github {
+	font-size: 0.9em;
+}

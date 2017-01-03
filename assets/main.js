@@ -6,7 +6,7 @@ class I {
 		this.name = "Andrey Zhevlakov";
 		this.nick = "azbang";
 		this.mail = "azbango5@gmail.com";
-		this.description = "Frontend Developer"; 
+		this.description = "Web Developer"; 
 		this.skills = [
 			"html5", "css3", "javascript", 
 			"es6", "coffescript"
@@ -24,6 +24,9 @@ generatePage(me);
 
 $(document).ready(function() {
 	var $code = $('code');
+	var $content = $('#content');
+	var $viewCode = $('#view-code');
+
 	var comleteStr = '';
 	var count = 0;
 	var isShowContent = false;
@@ -62,12 +65,12 @@ $(document).ready(function() {
 			if(e.which === 13) {
 				isShowContent = !isShowContent;
 
-				$('#content').removeClass('hide');
-				$('#content').toggleClass('content-blur', !isShowContent);
-				$('#view-code').toggleClass('code-blur', isShowContent);
+				$content.removeClass('hide');
+				$content.toggleClass('content-blur', !isShowContent);
+				$viewCode.toggleClass('code-blur', isShowContent);
 				
 				setTimeout(function() {
-					$('.hljs').toggleClass('zoom', isShowContent);
+					$code.toggleClass('zoom', isShowContent);
 				}, 500);
 			}
 		});

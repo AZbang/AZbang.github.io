@@ -8,8 +8,8 @@ class Point {
 		this.system = system;
 		this.ctx = system.scene;
 
-		this.x = system.vertices[index][0];
-		this.y = system.vertices[index][1];
+		this.x = system.vertices[index][0]*this.system.world.zoom;
+		this.y = system.vertices[index][1]*this.system.world.zoom;
 		this.isLetter = system.vertices[index][2];
 		console.log(system.vertices[index]);
 
@@ -60,7 +60,7 @@ class Point {
 			}
 
 			this.ctx.beginFill(0xC3C3C3);
-			this.ctx.drawCircle(this.x, this.y, 2);
+			this.ctx.drawCircle(this.x, this.y, 2*this.system.world.zoom);
 		}
 	}
 }

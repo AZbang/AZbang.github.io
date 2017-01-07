@@ -7,15 +7,14 @@ class World {
 	constructor(id, config = {}) {
 		this.w = window.innerWidth;
 		this.h = window.innerHeight;
+		this.zoom = this.w/1920;
 
 		this.renderer = PIXI.autoDetectRenderer(this.w, this.h, {
 			backgroundColor: 0xFFFFFF,
 			antialiasing: true
 		});
 		document.body.appendChild(this.renderer.view);
-
 		this.stage = new PIXI.Container();
-		this.stage.pivot.set(.5);
 
 		this.objects = [];
 	}

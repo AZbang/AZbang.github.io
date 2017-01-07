@@ -1,0 +1,115 @@
+/* BASE */
+html, body {
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: #3892ff;
+}
+a:hover, a:focus {
+	text-decoration: none;
+}
+::selection {
+	background: rgba(239, 165, 92, .4);
+}
+
+/* UTILS */
+.blur {
+	z-index: 1;
+	filter: blur(5px);
+}
+
+/* PAPER BLOCK */
+#paper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: 3s all;
+	filter: blur(0px);
+}
+
+
+#content {
+	position: absolute;
+	z-index: 1000;
+	opacity: 0;
+	top: 70px;
+	left: 50%;
+	width: 70%;
+	margin-left: -35%;
+	transition: 3s all;
+}
+
+/* INFO BLOCK */
+#info h1 {
+	font-size: 35px;
+	margin-bottom: 0;
+}
+#info p {
+	font-size: 30px;
+	margin-top: 10px;
+}
+
+/* CONTENT BLOCK*/
+#content {
+	font-family: "PT Sans Narrow", cursive;
+}
+
+/* PROJECTS LIST */
+.project {
+	height: 605px;
+	margin-bottom: 20px;
+	transition: .3s padding-bottom;
+}
+
+/* image project */
+.img {
+	width: 100%;
+	height: 200px;
+	border: 2px solid rgb(90, 90, 90);
+	background-position: 50% 50%;
+	background-size: cover;
+}
+/* label project*/
+.project span {
+	font-size: 40px;
+	margin-right: 10px;
+}
+/* description project */
+.project p {
+	font-size: 20px;
+	height: 385px;
+	padding: 0 10px 15px;
+	border-bottom: 3px solid rgb(90, 90, 90);
+}
+
+
+/* CONTACT LIST */
+#contacts {
+	overflow: hidden;
+	width: 177px;
+	margin: 15px auto;
+	padding: 0;
+	list-style-type: none;
+}
+#contacts li {
+	font-size: 2.6em;
+	float: left;
+	margin-left: 10px;
+	cursor: pointer;
+}
+#contacts li:hover {
+	color: #3892ff;
+}
+
+/* custom size icons */
+.fa-telegram {
+	font-size: .8em;
+}
+.fa-github {
+	font-size: .9em;
+}

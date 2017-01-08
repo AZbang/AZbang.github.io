@@ -1,21 +1,23 @@
 "use strict";
-const helper = require("./modules/helper");
 
+const helper = require("./modules/helper");
 
 class Point {
 	constructor(system, index) {
-		this.index = index;
+		this.world = system.world;
 		this.system = system;
 		this.ctx = system.scene;
+		
+		this.index = index;
 
-		this.x = system.vertices[index][0]*this.system.world.zoom;
-		this.y = system.vertices[index][1]*this.system.world.zoom;
+		this.x = system.vertices[index][0]*this.world.zoom;
+		this.y = system.vertices[index][1]*this.world.zoom;
 		this.isLetter = system.vertices[index][2];
-		console.log(system.vertices[index]);
 
 		this.commons = [];
 		this.dtCommons = [];
 		this.activeAnimations = [];
+		this.countActivatePoints = 0;
 
 		this.isStart = false;
 	}
@@ -38,8 +40,9 @@ class Point {
 			if(this.isCreateAnimation() || dt[i]) {
 				if(!dt[i]) dt[i] = {x: this.x, y: this.y};
 
-				dt[i].x = helper.lerp(dt[i].x, p.x, this.system.animationSpeed);
-				dt[i].y = helper.lerp(dt[i].y, p.y, this.system.animationSpeed);
+				var speed = Math.min(this.system.animationSpeed*this.world.ticker.deltaTime, 0.8);
+				dt[i].x = helper.lerp(dt[i].x, p.x, speed);
+				dt[i].y = helper.lerp(dt[i].y, p.y, speed);
 
 
 				if(helper.compare(dt[i].x, p.x, 1) && helper.compare(dt[i].y, p.y, 1)) {
@@ -62,6 +65,11 @@ class Point {
 			this.ctx.beginFill(0xC3C3C3);
 			this.ctx.drawCircle(this.x, this.y, 2*this.system.world.zoom);
 		}
+	}
+
+	resize() {
+		this.x = this.system.vertices[this.index][0]*this.world.zoom;
+		this.y = this.system.vertices[this.index][1]*this.world.zoom;
 	}
 }
 

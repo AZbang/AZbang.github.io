@@ -80,6 +80,11 @@ class TriangulationSystem {
 			--i; this.points[i].draw(time);
 		}
 	}
+	resize() {
+		for(let i = this.points.length; i;) {
+			--i; this.points[i].resize();
+		}
+	}
 }
 
 module.exports = TriangulationSystem;

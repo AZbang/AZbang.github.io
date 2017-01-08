@@ -23,6 +23,7 @@ module.exports = {
 			loader: "babel"
 		}]	
 	},
+	plugins: [],
 
 	devServer: {
 		host: 'localhost',

@@ -16,6 +16,10 @@ class World {
 		document.body.appendChild(this.renderer.view);
 		this.stage = new PIXI.Container();
 
+
+		this.ticker = new PIXI.ticker.Ticker();
+		this.ticker.add(this.loop.bind(this));
+
 		this.objects = [];
 	}
 
@@ -35,12 +39,11 @@ class World {
 	}
 
 	loop(time) {
+		console.log(this.ticker.FPS);
 		this.update(time);
 		this.draw(time);
 
 		this.renderer.render(this.stage);
-
-		requestAnimationFrame(this.loop.bind(this));
 	}
 
 	update(time) {
@@ -50,7 +53,16 @@ class World {
 	}	
 	draw(time) {
 		for(let i = 0; i < this.objects.length; i++) {
-			this.objects[i].draw && this.objects[i].draw(time);
+			this.objects[i].draw(time);
+		}
+	}
+	resize() {
+		this.w = window.innerWidth;
+		this.h = window.innerHeight;
+		this.zoom = this.w/1920;
+
+		for(let i = 0; i < this.objects.length; i++) {
+			this.objects[i].resize();
 		}
 	}
 }

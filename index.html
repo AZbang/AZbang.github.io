@@ -15,7 +15,7 @@
 				<canvas id="background"></canvas>
 				<div class="avatar" style="background-image: url({{image}});"></div>
 
-				<div id="contacts">
+				<div class="contacts">
 					<ul class="list">
 						{{#contacts}}
 							<li class="contact">
@@ -40,7 +40,7 @@
 						{{#projects}}
 							<li class="project" data-index="{{@index}}">
 								<a href="{{link}}">
-									<img src="{{image.source}}" alt="{{label}}">
+									<div style="background-image: url({{image.source}});" alt="{{label}}"></div>
 								</a>
 								<div class="info-project">
 									<h3>{{label}}</h3>
@@ -53,7 +53,6 @@
 					</ul>	
 				</div>
 			</section>
-
 		</script>
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.3.4/pixi.min.js"></script>

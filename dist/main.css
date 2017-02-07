@@ -1,112 +1,91 @@
 /* BASE */
 html, body {
-	padding: 0;
+	margin: 0;
 	height: 100%;
+	color: rgb(51, 51, 51);
+	font-family: 'Roboto', sans-serif;
 }
 
-a {
-	text-decoration: none;
-	color: #3892ff;
-}
+
 a:hover, a:focus {
 	text-decoration: none;
+}
+::-moz-selection {
+	background: rgba(239, 165, 92, .4);
 }
 ::selection {
 	background: rgba(239, 165, 92, .4);
 }
 
-/* UTILS */
-.blur-canvas {
-	z-index: 1;
-	filter: blur(4px);
+
+.list {
+	list-style-type: none;
 }
 
 
-/* PAPER BLOCK */
-canvas {
+#background {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 1000;
-	transition: 3s filter;
-	filter: blur(0px);
 }
 
-
-#content {
-	position: absolute;
-	z-index: 1;
-	opacity: 0;
-	top: 70px;
-	left: 50%;
-	width: 70%;
-	margin-left: -35%;
-	transition: 3s all;
-}
-
-/* INFO BLOCK */
-#info h1 {
-	font-size: 35px;
-	margin-bottom: 0;
-}
-#info p {
-	font-size: 30px;
-	margin-top: 10px;
-}
-
-/* CONTENT BLOCK*/
-#content {
-	font-family: "PT Sans Narrow", cursive;
-}
-
-/* PROJECTS LIST */
-.project {
-	margin-bottom: 20px;
-	transition: .3s padding-bottom;
-}
-
-/* image project */
-.img {
+#main {
+	position: relative;
 	width: 100%;
+	height: 60%;
+	background: #ccc;
+}
+.avatar {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
 	height: 200px;
-	border: 2px solid rgb(90, 90, 90);
-	background-position: 50% 50%;
+	border-radius: 50%;
+	margin-top: -100px;
+	margin-left: -100px;
+	border: 4px solid rgb(51, 51, 51);
+	background-position: center;
 	background-size: cover;
 }
-/* label project*/
-.project span {
-	font-size: 40px;
-	margin-right: 10px;
-}
-/* description project */
-.project p {
-	font-size: 20px;
-	padding: 0 10px 15px;
-}
 
 
-/* CONTACT LIST */
+
 #contacts {
-	overflow: hidden;
-	width: 177px;
-	margin: 15px auto;
-	padding: 0;
-	list-style-type: none;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
 }
 #contacts li {
-	font-size: 2.6em;
-	float: left;
-	margin-left: 10px;
-	cursor: pointer;
+	float: right;
+	margin-right: 15px;
+	font-size: 1.4em;
 }
-#contacts li:hover {
-	color: #3892ff;
+#contacts a {
+	color: #494949;
 }
 
-/* custom size icons */
-.fa-telegram {
-	font-size: .8em;
+
+.content {
+	width: 60%;
+	margin: auto;
+	padding-top: 20px;
+	overflow: hidden;
 }
-.fa-github {
-	font-size: .9em;
+
+.project {
+	overflow: hidden;
+	width: 100%;
+	height: 200px;
+}
+
+.project a {
+	float: left;
+	width: 30%;
+	height: 100%;
+}
+.project .info-project {
+	float: left;
+	width: 70%;
+	height: 100%;
 }

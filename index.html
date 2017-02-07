@@ -2,61 +2,61 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>AZBANG</title>
-		
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<title>azbang</title>
 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link rel="stylesheet" href="dist/main.css">
-		<link rel="stylesheet" href="dist/bootstrap.grid.css">
 	</head>
 	<body>
+		<script id="template" type="text/x-handlebars-template">
+			<section id="main">
+				<canvas id="background"></canvas>
+				<div class="avatar" style="background-image: url({{image}});"></div>
 
-		<!-- Content -->
-		<div id="content">
-			<div id="info">
-				<h1>Andrey Zhevolakov <small>@azbang</small></h1>
-				<p>Web Developer <i class="fa fa-rocket" aria-hidden="true"></i></p>
-			</div>
+				<div id="contacts">
+					<ul class="list">
+						{{#contacts}}
+							<li class="contact">
+								<a href="{{link}}">
+									<i class="fa {{icon}}"></i>
+								</a>
+							</li>
+						{{/contacts}}
+					</ul>
+				</div>
+			</section>
 
-			<div id="projects-list" class="row">
-				<div class="project col-sm-12 col-md-6 col-lg-4">
-					<a href="https://github.com/AZbang/LearnWords">
-						<div class="img" style="background-image: url(https://pp.vk.me/c626716/v626716691/435d8/8B9JxySakXM.jpg)"></div>
-					</a>
-					<p>
-						<span>LearnWords</span> <br>
-						Small interactive service for learning foreign words. <br>
-						At the moment there are 2000 commonly used words. <br>
-						The base words were taken from the site <a href="http://4flaga.ru">http://4flaga.ru</a> and later slightly tweaked and converted in the JSON format.
-					</p>
+			<section id="about">
+				<div class="content">
+					{{#markdown description}}{{/markdown}}
 				</div>
-				<div class="project col-sm-12 col-md-6 col-lg-4">
-					<a href="https://github.com/AZbang/LINES">
-						<div class="img" style="background-image: url(https://camo.githubusercontent.com/380975c43f9ed1ea82981fc99aab476a8f3741f0/68747470733a2f2f70356234793274362e73736c2e687763646e2e6e65742f67616d652d6865616465722f323030302f3133343238382d76707239687074642e6a7067)"></div>
-					</a>
-					<p><span>LINES</span> <br>A geometric puzzle made in a minimalist style, in which you have to use logic and skill to solve problems without knowing the goal. Over time, the game becomes more complicated, introducing new possibilities and combinations. I am sure that with each complete level you will be more and more proud of myself, because it's really hard!</p>
+			</section>
+
+			<section id="projects">
+				<div class="content">
+					<ul class="list">
+						{{#projects}}
+							<li class="project" data-index="{{@index}}">
+								<a href="{{link}}">
+									<img src="{{image.source}}" alt="{{label}}">
+								</a>
+								<div class="info-project">
+									<h3>{{label}}</h3>
+									<div class="description">
+										{{#markdown description}}{{/markdown}}
+									</div>									
+								</div>
+							</li>
+						{{/projects}}
+					</ul>	
 				</div>
-				<div class="project col-sm-12 col-md-6 col-lg-4">
-					<a href="https://github.com/AZbang/RadialBar">
-						<div class="img" style="background-image: url(https://github.com/AZbang/RadialBar/raw/master/pic.gif)"></div>
-					</a>
-					<p>
-						<span>RadialBar</span> <br>
-						This JavaScript library allows you to create radial progress bars on the canvas.
-					</p>
-				</div>
-			</div>
-			
-			<ul id="contacts">
-				<li><a href="https://vk.com/azbang"><i class="fa fa-vk"></i></a></li>
-				<li><a href="https://twitter.com/azbang2"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="https://telegram.me/AZbang"><i class="fa fa-telegram"></i></a></li>
-				<li><a href="https://github.com/AZbang"><i class="fa fa-github"></i></a></li>
-			</ul>
-		</div>
+			</section>
+
+		</script>
 		
-		<script src="dist/pixi.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.3.4/pixi.min.js"></script>
 		<script src="dist/app.js"></script>
 	</body>
 </html>

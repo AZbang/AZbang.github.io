@@ -1,0 +1,39 @@
+{
+	"image": "dist/img/avatar.png",
+	"name": "Андрей Жевлаков",
+	"description": "# Обо мне:\nПривет, меня зовут Андрей Жевлаков!\n# Мои проекты:",
+	"skils": [
+		"**Javascript**",
+		"**HTML5**"
+	],
+	"projects": [
+		{
+			"image": {
+				"points": [],
+				"source": "",
+				"description": ""
+			},
+			"link": "",
+			"label": "LINES",
+			"description": "**Game**"
+		}
+	],
+	"contacts": [
+		{
+			"link": "https://vk.com/azbang",
+			"icon": "fa-vk"
+		},
+		{
+			"link": "https://twitter.com/azbang2",
+			"icon": "fa-twitter"
+		},
+		{
+			"link": "https://telegram.me/AZbang",
+			"icon": "fa-telegram"
+		},
+		{
+			"link": "https://github.com/AZbang",
+			"icon": "fa-github"
+		}
+	]
+}

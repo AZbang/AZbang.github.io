@@ -45,7 +45,7 @@ var errorMessage = () => {
 // server
 gulp.task('server', () => {
 	return connect.server({
-		port: 1338,
+		port: 8080,
 		livereload: true,
 		root: path.root
 	});

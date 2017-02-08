@@ -1,20 +1,28 @@
-"use scrict";
+"use strict";
 
-const PIXI = require('pixi.js');
 const delaunay = require("delaunay-fast");
 const Point = require("./Point");
-const helper = require("./modules/helper");
+const helper = require("./helper");
 
-class TriangulationSystem {
-	constructor(config) {
-		this.world = config.world;
+class PolyRun {
+	constructor(config = {}) {
+		this.root = config.root;
+		this.view = config.view;
+		this.ctx = this.view.getContext('2d');
 
-		this.scene = new PIXI.Graphics();
-		this.world.stage.addChild(this.scene);
+		this.w = this.root.width();
+		this.h = this.root.height();
+		this.view.width = this.w;
+		this.view.height = this.h;
+		this.rootScale = this.w;
+		this.zoom = this.w/this.rootScale;
 
 		this.vertices = config.vertices || [];
 		this.animationSpeed = config.animationSpeed || 0.1;
 		this.probabilityCreateAnimation = config.probabilityCreateAnimation || 50;
+		this.startPoint = config.startPoint;
+
+		this.style = config.style || {};
 
 		this.points = [];
 		this.triangles = [];
@@ -22,6 +30,7 @@ class TriangulationSystem {
 		this.ACCELERATION_ANIMATION = 0.001;
 
 		this._create();
+		this.points[this.startPoint].start();
 	}
 	_createPoints() {
 		var iterationsControl = 0;
@@ -66,25 +75,43 @@ class TriangulationSystem {
 		this._createPoints();
 		this._createPointLinks();
 	}
+
+	start() {
+		this.loop();
+	}
+
+	loop(time) {
+		this.update(time);
+		this.draw(time);
+
+		requestAnimationFrame(() => this.loop());
+	}
+
 	update(time) {
 		if(this.animationSpeed < 0.5) this.animationSpeed += this.ACCELERATION_ANIMATION;
 
 		for(let i = this.points.length; i;) {
 			--i; this.points[i].update(time);
 		}
-	}
+	}	
 	draw(time) {
-		this.scene.clear();
+		this.ctx.clearRect(0, 0, this.w, this.h);
 
 		for(let i = this.points.length; i;) {
 			--i; this.points[i].draw(time);
 		}
 	}
 	resize() {
+		this.w = this.root.width();
+		this.h = this.root.height();
+		this.view.width = this.w;
+		this.view.height = this.h;
+		this.zoom = this.w/this.rootScale;
+
 		for(let i = this.points.length; i;) {
 			--i; this.points[i].resize();
 		}
 	}
 }
 
-module.exports = TriangulationSystem;
+module.exports = PolyRun;

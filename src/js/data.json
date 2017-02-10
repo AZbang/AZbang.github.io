@@ -1,10 +1,12 @@
 {
 	"image": "dist/img/avatar.png",
 	"name": "Андрей Жевлаков",
-	"description": "# Обо мне:\nПривет, меня зовут Андрей Жевлаков!\n# Мои проекты:",
-	"skils": [
-		"**Javascript**",
-		"**HTML5**"
+	"label": "Web Разработчик",
+	"description": [
+		"Привет, меня зовут **Андрей Жевлаков**! Я занимаюсь Веб разработкой уже около двух лет.",
+		"### Мои навыки:",
+		"* **Разработка Веб приложений на Node.js, Jade (Pug)**",
+		"* **Разработка telegram ботов на Node.js**"
 	],
 	"projects": [
 		{
@@ -14,34 +16,16 @@
 			},
 			"link": "https://github.com/AZbang/LINES",
 			"label": "LINES",
-			"description": "__A geometric puzzle__ made in a __minimalist style__, in which you have to use **logic** and **skill** to solve problems without knowing the goal. Over time, the game becomes more complicated, introducing new possibilities and combinations. I am sure that with each complete level you will be more and more proud of myself, because **it's really hard!**"
+			"description": "**LINES** — это геометрическая головоломка, выполненная в минималистичном стиле, в которой Вам придется использовать логику и умения решать задачи не зная поставленной цели. Со временем игра усложняется, вводятся новые возможности и комбинации. Я уверен, что с каждым пройденном уровнем Вы будете все больше и больше гордится собой, ведь это действительно сложно!"
 		},
 		{
 			"image": {
 				"points": [],
-				"source": "https://camo.githubusercontent.com/380975c43f9ed1ea82981fc99aab476a8f3741f0/68747470733a2f2f70356234793274362e73736c2e687763646e2e6e65742f67616d652d6865616465722f323030302f3133343238382d76707239687074642e6a7067"
+				"source": "https://camo.githubusercontent.com/e56bd861e3e3ebb2aae2b9d9912eab57913bfbb0/68747470733a2f2f70702e766b2e6d652f633833363732392f763833363732393639312f31373164342f6f35384a43682d5234376b2e6a7067"
 			},
-			"link": "https://github.com/AZbang/LINES",
-			"label": "LINES",
-			"description": "__A geometric puzzle__ made in a __minimalist style__, in which you have to use **logic** and **skill** to solve problems without knowing the goal. Over time, the game becomes more complicated, introducing new possibilities and combinations. I am sure that with each complete level you will be more and more proud of myself, because **it's really hard!**"
-		},
-		{
-			"image": {
-				"points": [],
-				"source": "https://camo.githubusercontent.com/380975c43f9ed1ea82981fc99aab476a8f3741f0/68747470733a2f2f70356234793274362e73736c2e687763646e2e6e65742f67616d652d6865616465722f323030302f3133343238382d76707239687074642e6a7067"
-			},
-			"link": "https://github.com/AZbang/LINES",
-			"label": "LINES",
-			"description": "__A geometric puzzle__ made in a __minimalist style__, in which you have to use **logic** and **skill** to solve problems without knowing the goal. Over time, the game becomes more complicated, introducing new possibilities and combinations. I am sure that with each complete level you will be more and more proud of myself, because **it's really hard!**"
-		},
-		{
-			"image": {
-				"points": [],
-				"source": "https://camo.githubusercontent.com/380975c43f9ed1ea82981fc99aab476a8f3741f0/68747470733a2f2f70356234793274362e73736c2e687763646e2e6e65742f67616d652d6865616465722f323030302f3133343238382d76707239687074642e6a7067"
-			},
-			"link": "https://github.com/AZbang/LINES",
-			"label": "LINES",
-			"description": "__A geometric puzzle__ made in a __minimalist style__, in which you have to use **logic** and **skill** to solve problems without knowing the goal. Over time, the game becomes more complicated, introducing new possibilities and combinations. I am sure that with each complete level you will be more and more proud of myself, because **it's really hard!**"
+			"link": "https://github.com/AZbang/LearnWords",
+			"label": "LearnWords",
+			"description": "**LearnWords** — это небольшой интерактивный сервис для изучения иностранных слов. Вам необходимо правильно написать слово перевод с русского на английский. Это поможет запомнить новые слова и повторить написания старых."
 		}
 	],
 	"contacts": [

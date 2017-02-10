@@ -64,6 +64,10 @@ a:hover, a:focus {
 	color: #494949;
 }
 
+#main {
+	text-align: center;
+}
+
 
 .content {
 	width: 60%;

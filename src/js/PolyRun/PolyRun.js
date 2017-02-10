@@ -12,14 +12,21 @@ class PolyRun {
 
 		this.w = this.root.width();
 		this.h = this.root.height();
+
 		this.view.width = this.w;
 		this.view.height = this.h;
-		this.rootScale = this.w;
+		this.rootScale = config.rootScale || this.w;
 		this.zoom = this.w/this.rootScale;
 
-		this.vertices = config.vertices || [];
+		this.cell = config.cell || 100;
+
+		if(config.vertices)
+			this.vertices = config.vertices;
+		else this._generateVertices();
+
+
 		this.animationSpeed = config.animationSpeed || 0.1;
-		this.probabilityCreateAnimation = config.probabilityCreateAnimation || 50;
+		this.probabilityCreateAnimation = config.probabilityCreateAnimation || 10;
 		this.startPoint = config.startPoint;
 
 		this.style = config.style || {};
@@ -31,6 +38,18 @@ class PolyRun {
 
 		this._create();
 		this.points[this.startPoint].start();
+	}
+	_generateVertices() {
+		this.vertices = [];
+
+		for(let y = -1; y < Math.round(this.h/this.cell)+1; y++) {
+			for(let x = -1; x < Math.round(this.w/this.cell)+1; x++) {
+				let posY = helper.randRange(y*this.cell+this.cell/6, (y+1)*this.cell-this.cell/6);
+				let posX = helper.randRange(x*this.cell+this.cell/6, (x+1)*this.cell-this.cell/6);
+
+				this.vertices.push([posX, posY]);
+			}
+		}
 	}
 	_createPoints() {
 		var iterationsControl = 0;
@@ -75,7 +94,6 @@ class PolyRun {
 		this._createPoints();
 		this._createPointLinks();
 	}
-
 	start() {
 		this.loop();
 	}

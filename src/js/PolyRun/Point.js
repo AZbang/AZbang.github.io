@@ -34,7 +34,7 @@ class Point {
 
 	update() {
 		if(this.isStart) {
-			if(helper.randRange(0, 10) === 0) this.newLineAnimation();
+			if(helper.randRange(0, this.root.probabilityCreateAnimation) === 0) this.newLineAnimation();
 			this.animation();
 		}
 	}
@@ -59,27 +59,24 @@ class Point {
 		if(!this.isStart) return;
 
 		for(let i = 0; i < this.dtCommons.length; i++) {
-			// this.ctx.strokeStyle = '#999';
-			this.ctx.fillStyle = '#000';
-			// this.isLetter && this.commons[i].isLetter ? this.style.colorActiveLine : this.style.colorLine;
-			// this.ctx.lineWidth = 0.5;
+			this.ctx.strokeStyle = this.isSelect && this.dtCommons[i][1].isSelect ? this.style.colorActiveLine : this.style.colorLine;
+			this.ctx.lineWidth = this.style.lineWidth;
 
-			// this.ctx.moveTo(this.x, this.y);
-			this.ctx.arc(this.x, this.y, 0, 0, 2*Math.PI);	
-			this.ctx.arc(this.dtCommons[i][0].x, this.dtCommons[i][0].y, 0, 0, 2*Math.PI);		
+			this.ctx.beginPath();
+			this.ctx.moveTo(this.x, this.y);
+			this.ctx.lineTo(this.dtCommons[i][0].x, this.dtCommons[i][0].y, 0, 0, 2*Math.PI);		
+			this.ctx.stroke();
 		}
-		this.ctx.stroke();
-		this.ctx.beginPath();
+		
 
-		debugger;
-		// if(this.style.isPointRender !== false) {
-		// 	this.ctx.fillStyle = this.style.colorPoint;
-		// 	this.ctx.arc(this.x, this.y, this.style.radiusPoint*this.root.zoom, 0, 2*Math.PI);
-		// 	this.ctx.fill();
-		// }
+		if(this.style.isRenderPoint) {
+			this.ctx.fillStyle = this.style.colorPoint;
+			this.ctx.arc(this.x, this.y, this.style.radiusPoint || 2.5, 0, 2*Math.PI);
+			this.ctx.fill();
+		}
 	}
 
-	resize() {
+	resize() {	
 		this.x = this.root.vertices[this.index][0]*this.root.zoom;
 		this.y = this.root.vertices[this.index][1]*this.root.zoom;
 	}

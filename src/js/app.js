@@ -1,44 +1,47 @@
 "use strict";
 
 const Handlebars = require('handlebars');
-const PolyRun = require("./PolyRun");
+const PolyRun = require("poly_run");
 const $ = require('jquery');
 
 // My Data
 const data = require('./data');
+data.descriptionMarkdown = data.description.join('\n');
 
 $(() => {
-	data.descriptionMarkdown = '';
-	for(let i = 0; i < data.description.length; i++) {
-		data.descriptionMarkdown += '\n' + data.description[i];
-	}
 
 	Handlebars.registerHelper('markdown', require('helper-markdown'));
 	var source = $("#template").html();
 	var template = Handlebars.compile(source);
 	$('body').html(template(data));
 
-
-
-	var vertices = [];
 	
-	var poly = new PolyRun({
-		root: $('#main'),
+	PolyRun.add('bg', {
+		parent: document.getElementById('main'),
 		view: document.getElementById('background'),
-		animationSpeed: 0.1,
-		startPoint: 0,
-		isRenderPoint: true,
+		startPoint: 1,
+
 		cell: 100,
+		compress: 6,
+
+		animation: 0.1,
+		speed: 0.1,
+		acceleration: 0.00001,
 
 		style: {
-			colorActiveLine: 'orange',
-			colorLine: '#333',
-			colorPoint: '#000',
-			radiusPoint: 2.5,
-			lineWidth: 1
+			0: {
+				strokeStyle: '#333',
+				lineWidth: 0.5,
+				isRenderPoint: true,
+				fillStyle: 'red',
+				radiusPoint: 2.5
+			}
 		}
 	});
 
-	window.onresize = poly.resize.bind(poly);
-	poly.start();
+	var loop = () => {
+		PolyRun.update();
+		requestAnimationFrame(loop);
+	}
+	loop();
 });

@@ -1,14 +1,14 @@
 "use strict";
 
-const Handlebars = require('handlebars');
-const PolyRun = require("poly_run");
-const $ = require('jquery');
+var Handlebars = require('handlebars');
+var PolyRun = require("poly_run");
+var $ = require('jquery');
 
 // My Data
-const data = require('./data');
+var data = require('./data');
 data.descriptionMarkdown = data.description.join('\n');
 
-$(() => {
+$(function() {
 
 	Handlebars.registerHelper('markdown', require('helper-markdown'));
 	var source = $("#template").html();
@@ -33,13 +33,13 @@ $(() => {
 				strokeStyle: '#333',
 				lineWidth: 0.5,
 				isRenderPoint: true,
-				fillStyle: 'red',
+				fillStyle: '#424242',
 				radiusPoint: 2.5
 			}
 		}
 	});
 
-	var loop = () => {
+	var loop = function() {
 		PolyRun.update();
 		requestAnimationFrame(loop);
 	}

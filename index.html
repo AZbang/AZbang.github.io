@@ -4,59 +4,86 @@
 		<meta charset="UTF-8">
 		<title>azbang</title>
 
+		<link href="//cdn.muicss.com/mui-0.9.27/css/mui.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-		<link rel="stylesheet" href="dist/main.css">
+		<link rel="stylesheet" href="www/main.css">
 	</head>
 	<body>
 		<script id="template" type="text/x-handlebars-template">
-			<section id="main">
-				<canvas id="background"></canvas>
-				<div class="avatar" style="background-image: url({{image}});"></div>
-				<h1>{{name}}</h1>
-				<h3>{{label}}</h3>
+			<canvas id="background"></canvas>
 
-				<div class="contacts">
-					<ul class="list">
-						{{#contacts}}
-							<li class="contact">
-								<a href="{{link}}">
-									<i class="fa {{icon}}"></i>
-								</a>
-							</li>
-						{{/contacts}}
-					</ul>
-				</div>
-			</section>
-
-			<section id="about">
-				<div class="content">
-<!-- 					<h1>Обо мне:</h1>
-					{{#markdown descriptionMarkdown}}{{/markdown}}
-					<br> -->
-
-					<h1>Мои проекты:</h1>
-					<div id="projects">
-						<ul class="list">
-							{{#projects}}
-								<li class="project" data-index="{{@index}}">
+			<section class="mui-container">
+				<div class="mui-panel">
+					<h1 class="label">About Me</h1>
+					<p class="text mui--text-title">{{description}}</p>
+					<div class="links mui--text-center">
+						<ul class="list mui-list--unstyled mui-list--inline">
+							{{#links}}
+								<li class="contact">
 									<a href="{{link}}">
-										<div style="background-image: url({{image.source}});" alt="{{label}}"></div>
+										<i class="fa {{icon}}"></i>
 									</a>
-									<div class="info-project">
-										<h3>{{label}}</h3>
-										<div class="description">
-											{{#markdown description}}{{/markdown}}
-										</div>									
-									</div>
 								</li>
-							{{/projects}}
-						</ul>	
+							{{/links}}
+						</ul>
+					</div>
+					<br>
+					<div class="mui-divider"></div>
+					<br>
+					<h1 class="label">My Projects</h1>
+					{{#each projects}}
+						<div class="mui-row project">
+							{{#if this.dir}}
+								<div class="mui-col-md-1"></div>
+								<div class="mui-col-md-3">
+									<div class="project__image" style="background-image: url({{this.image.source}});"></div>
+								</div>
+								<div class="mui-col-md-6">
+									<h1 class="project__label">{{this.label}}</h1>
+									<div class="project__description">
+										{{#markdown this.description}}{{/markdown}}
+									</div>
+									<a href="{{this.github}}" class="mui-btn dark">GitHub</a>
+									<a href="{{this.demo}}" class="mui-btn dark">Demo</a>
+								</div>
+							{{else}}
+								<div class="mui-col-md-2"></div>
+								<div class="mui-col-md-6">
+									<h1 class="project__label">{{label}}</h1>
+									<div class="project__description">
+										{{#markdown this.description}}{{/markdown}}
+									</div>
+									<a href="{{this.github}}" class="mui-btn dark">GitHub</a>
+									<a href="{{this.demo}}" class="mui-btn dark">Demo</a>
+								</div>
+								<div class="mui-col-md-3">
+									<div class="project__image" style="background-image: url({{this.image.source}});"></div>
+								</div>
+							{{/if}}
+						</div>
+						<div class="mui-divider"></div>
+					{{/each}}
+					<h1 class="label">Contacts</h1>
+					<div class="text mui--text-title contacts-text">
+						{{#markdown contactsMarkdown}}{{/markdown}}
+					</div>
+					<div class="links mui--text-center">
+						<ul class="list mui-list--unstyled mui-list--inline">
+							{{#links}}
+								<li class="contact">
+									<a href="{{link}}">
+										<i class="fa {{icon}}"></i>
+									</a>
+								</li>
+							{{/links}}
+						</ul>
 					</div>
 				</div>
 			</section>
 		</script>
-		
-		<script src="dist/app.js"></script>
+
+		<script src="www/PolyRun.js"></script>
+		<script src="www/app.js"></script>
 	</body>
 </html>

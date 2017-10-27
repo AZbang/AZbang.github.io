@@ -16,6 +16,15 @@ $(() => {
 	var source = $("#template").html();
 	var template = Handlebars.compile(source);
 	$('body').html(template(data));
-	
-	renderPoly($('#background')[0], window.innerWidth, window.innerHeight, 'rgb(17, 17, 17)');
+
+	let img = document.createElement('img');
+	img.setAttribute('src', data.image)
+
+	img.addEventListener('load', function() {
+		let colorThief = new ColorThief();
+		let main = colorThief.getColor(img);
+		let color = `rgb(${main[0]}, ${main[1]}, ${main[2]})`;
+		$('.avatar').css('borderColor', color);
+		renderPoly($('#background')[0], window.innerWidth, window.innerHeight, color);
+	});
 });

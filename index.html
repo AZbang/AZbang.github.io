@@ -13,17 +13,17 @@
 	<body>
 		<script id="template" type="text/x-handlebars-template">
 			<canvas id="background"></canvas>
-			<img src="{{image}}" alt="avatar" class="avatar">
+			<div style="background-image: url({{image}});" alt="avatar" class="avatar text-color-thief"></div>
 			<section class="mui-container">
 				<div class="mui-panel">
-					<h1 class="label">About Me</h1>
-					<p class="text mui--text-title">{{description}}</p>
+					<h1 class="label text-color-thief">About Me</h1>
+					<p class="text text-color-thief mui--text-title">{{description}}</p>
 					<div class="links mui--text-center">
 						<ul class="list mui-list--unstyled mui-list--inline">
 							{{#links}}
 								<li class="contact">
 									<a href="{{link}}">
-										<i class="fa {{icon}}"></i>
+										<i class="fa text-color-thief {{icon}}"></i>
 									</a>
 								</li>
 							{{/links}}
@@ -32,41 +32,25 @@
 					<br>
 					<div class="mui-divider"></div>
 					<br>
-					<h1 class="label">My Projects</h1>
+					<h1 class="label text-color-thief">My Projects</h1>
 					{{#each projects}}
 						<div class="mui-row project">
-							{{#if this.dir}}
-								<div class="mui-col-md-1"></div>
-								<div class="mui-col-md-3">
-									<div class="project__image" style="background-image: url({{this.image.source}});"></div>
+							<div class="mui-col-md-4 mui-col-xs-12 mui-col-md-offset-1">
+								<div class="project__image" style="background-image: url({{this.image.source}});"></div>
+							</div>
+							<div class="mui-col-md-6 mui-col-xs-12">
+								<h1 class="project__label text-color-thief">{{this.label}}</h1>
+								<div class="project__description text-color-thief">
+									{{#markdown this.description}}{{/markdown}}
 								</div>
-								<div class="mui-col-md-6">
-									<h1 class="project__label">{{this.label}}</h1>
-									<div class="project__description">
-										{{#markdown this.description}}{{/markdown}}
-									</div>
-									<a href="{{this.github}}" class="mui-btn dark">GitHub</a>
-									<a href="{{this.demo}}" class="mui-btn dark">Demo</a>
-								</div>
-							{{else}}
-								<div class="mui-col-md-2"></div>
-								<div class="mui-col-md-6">
-									<h1 class="project__label">{{label}}</h1>
-									<div class="project__description">
-										{{#markdown this.description}}{{/markdown}}
-									</div>
-									<a href="{{this.github}}" class="mui-btn dark">GitHub</a>
-									<a href="{{this.demo}}" class="mui-btn dark">Demo</a>
-								</div>
-								<div class="mui-col-md-3">
-									<div class="project__image" style="background-image: url({{this.image.source}});"></div>
-								</div>
-							{{/if}}
+								<a href="{{this.github}}" class="mui-btn project__btn bg-color-thief">GitHub</a>
+								<a href="{{this.demo}}" class="mui-btn project__btn bg-color-thief">Demo</a>
+							</div>
 						</div>
 						<div class="mui-divider"></div>
 					{{/each}}
-					<h1 class="label">Contacts</h1>
-					<div class="text mui--text-title contacts-text">
+					<h1 class="label text-color-thief">Contacts</h1>
+					<div class="text mui--text-title text-color-thief">
 						{{#markdown contactsMarkdown}}{{/markdown}}
 					</div>
 					<div class="links mui--text-center">
@@ -74,7 +58,7 @@
 							{{#links}}
 								<li class="contact">
 									<a href="{{link}}">
-										<i class="fa {{icon}}"></i>
+										<i class="fa text-color-thief {{icon}}"></i>
 									</a>
 								</li>
 							{{/links}}

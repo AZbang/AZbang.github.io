@@ -14,9 +14,7 @@
   "dependencies": {
     "handlebars": "^4.0.6",
     "helper-markdown": "^0.2.1",
-    "jquery": "^3.1.1",
-    "node-vibrant": "^3.0.0-alpha.2",
-    "poly_run": "^0.1.1"
+    "jquery": "^3.1.1"
   },
   "scripts": {
     "start": "gulp"

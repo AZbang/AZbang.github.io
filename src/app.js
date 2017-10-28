@@ -1,6 +1,5 @@
 "use strict";
 
-const Vibrant = require('node-vibrant');
 const Handlebars = require('handlebars');
 const $ = require('jquery');
 
@@ -23,8 +22,12 @@ $(() => {
 	img.addEventListener('load', function() {
 		let colorThief = new ColorThief();
 		let main = colorThief.getColor(img);
-		let color = `rgb(${main[0]}, ${main[1]}, ${main[2]})`;
-		$('.avatar').css('borderColor', color);
-		renderPoly($('#background')[0], window.innerWidth, window.innerHeight, color);
+		let back = colorThief.getPalette(img, 2)[0];
+		let maincolor = `rgb(${main[0]}, ${main[1]}, ${main[2]})`;
+		let backcolor = `rgb(${back[0]}, ${back[1]}, ${back[2]})`;
+		$('.avatar').css('borderColor', maincolor);
+		$('.text-color-thief').css({'color': backcolor});
+		$('.bg-color-thief').css({'background-color': maincolor});
+		renderPoly($('#background')[0], window.innerWidth, window.innerHeight, maincolor);
 	});
 });

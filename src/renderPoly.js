@@ -54,8 +54,8 @@ module.exports = (view, w, h, mainColor, side) => {
 	});
 
   let fx = PolyRun.effects[view.id];
-  fx.start(Math.round(fx.points.length/2+w/50));
-  console.log(PolyRun)
+  fx.start(Math.round(w/100));
+  fx.start(0);
 
 	var loop = () => {
 		PolyRun.update();

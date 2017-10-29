@@ -2,7 +2,7 @@ module.exports = (view, w, h, mainColor, sideColor) => {
   view.width = w;
 	view.height = h;
 	var ctx = view.getContext('2d');
-  var grd = ctx.createRadialGradient(w/2, h/10+200, w/4, w/2, 200, w);
+  var grd = ctx.createRadialGradient(w/2, h/10+200, w/10, w/2, 200, w);
   grd.addColorStop(0, mainColor);
   grd.addColorStop(1, sideColor);
 

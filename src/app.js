@@ -9,6 +9,7 @@ const renderPoly = require('./renderPoly');
 const data = require('./data');
 data.descriptionMarkdown = data.description.join('\n\n');
 data.contactsMarkdown = data.contacts.join('\n\n');
+data.image = data.images[Math.floor(Math.random()*data.images.length)];
 
 $(() => {
 	Handlebars.registerHelper('markdown', require('helper-markdown'));
@@ -28,6 +29,8 @@ $(() => {
 		$('.avatar, .mui-panel').css('borderColor', maincolor);
 		$('.text-color-thief').css({'color': backcolor});
 		$('.bg-color-thief').css({'background-color': maincolor});
-		renderPoly($('#background')[0], window.innerWidth, window.innerHeight, maincolor, backcolor);
+
+		if(window.innerWidth > 520)
+			renderPoly($('#background')[0], window.innerWidth, window.innerHeight, maincolor, backcolor);
 	});
 });

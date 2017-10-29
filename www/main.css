@@ -13,6 +13,16 @@ section {
 	top: 0;
 	left: 0;
 }
+#imageblur {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  filter: opacity(.2) blur(15px);
+  left: 0;
+  background-size: cover;
+  background-position: center;
+}
 
 .mui-panel {
 	padding-bottom: 50px;
@@ -70,14 +80,33 @@ section .text {
 .project {
   padding-bottom: 36px;
 }
+.project .project__imagewrap {
+	/*position: relative;
+  width: 100%;
+  padding-bottom: 100%;*/
+  margin-top: 25px;
+  /*float: left;
+  height: 0;*/
+}
+
 .project .project__image {
+	/*border-radius: 50%;*/
 	width: 100%;
 	height: 185px;
-	margin-top: 30px;
+	/*position: absolute;
+	left: 0;*/
 	background-position: center;
 	background-size: cover;
 	background-color: #333;
 }
+/*@media only screen and (max-width: 767px) {
+		.project .project__imagewrap {
+			padding-bottom: 50%;
+		}
+		.project .project__image {
+			border-radius: 0%;
+    }
+}*/
 .project .project__label {
 	font-family: Roboto Light;
 	font-size: 2em;

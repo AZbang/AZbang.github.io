@@ -12,6 +12,7 @@
 	</head>
 	<body>
 		<script id="template" type="text/x-handlebars-template">
+			<div id="imageblur" style="background-image: url({{image}});"></div>
 			<canvas id="background"></canvas>
 			<div style="background-image: url({{image}});" alt="avatar" class="avatar text-color-thief"></div>
 			<section class="mui-container">
@@ -36,7 +37,9 @@
 					{{#each projects}}
 						<div class="mui-row project">
 							<div class="mui-col-md-4 mui-col-xs-12 mui-col-md-offset-1">
-								<div class="project__image" style="background-image: url({{this.image.source}});"></div>
+								<div class="project__imagewrap">
+									<div class="project__image" style="background-image: url({{this.image.source}});"></div>
+								</div>
 							</div>
 							<div class="mui-col-md-6 mui-col-xs-12">
 								<h1 class="project__label text-color-thief">{{this.label}}</h1>

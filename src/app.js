@@ -19,15 +19,15 @@ $(() => {
 	let img = document.createElement('img');
 	img.setAttribute('src', data.image)
 
-	img.addEventListener('load', function() {
+	img.addEventListener('load', () => {
 		let colorThief = new ColorThief();
 		let main = colorThief.getColor(img);
-		let back = colorThief.getPalette(img, 2)[0];
+		let back = colorThief.getPalette(img)[1];
 		let maincolor = `rgb(${main[0]}, ${main[1]}, ${main[2]})`;
 		let backcolor = `rgb(${back[0]}, ${back[1]}, ${back[2]})`;
-		$('.avatar').css('borderColor', maincolor);
+		$('.avatar, .mui-panel').css('borderColor', maincolor);
 		$('.text-color-thief').css({'color': backcolor});
 		$('.bg-color-thief').css({'background-color': maincolor});
-		renderPoly($('#background')[0], window.innerWidth, window.innerHeight, maincolor);
+		renderPoly($('#background')[0], window.innerWidth, window.innerHeight, maincolor, backcolor);
 	});
 });

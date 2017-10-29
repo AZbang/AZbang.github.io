@@ -16,9 +16,10 @@ section {
 
 .mui-panel {
 	padding-bottom: 50px;
-	margin: 0;
+	margin-bottom: 10%;
 	border-radius: 3px;
-	box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+	border-top: 3px solid #333;
+	/*box-shadow: 0 0 10px rgba(0, 0, 0, .3);*/
 }
 
 .avatar {
@@ -33,6 +34,13 @@ section {
 	border: 5px solid rgb(17, 17, 17);
 }
 
+@media only screen and (max-width: 520px) {
+		.avatar {
+			width: 200px;
+			height: 200px;
+    }
+}
+
 /* UI ELEMENTS*/
 section .label {
 	text-align: center;
@@ -42,12 +50,9 @@ section .label {
 }
 section .text {
 	text-align: center;
+	font-size: 1.2em;
 	font-family: Roboto Light;
 	padding: 0 10%;
-}
-
-section .contacts-text {
-	line-height: 0.8em;
 }
 
 /* CONTACTS LINK*/

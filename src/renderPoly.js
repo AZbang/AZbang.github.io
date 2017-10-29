@@ -1,7 +1,10 @@
-module.exports = (view, w, h, mainColor, side) => {
+module.exports = (view, w, h, mainColor, sideColor) => {
   view.width = w;
 	view.height = h;
 	var ctx = view.getContext('2d');
+  var grd = ctx.createRadialGradient(w/2, h/10+200, w/4, w/2, 200, w);
+  grd.addColorStop(0, mainColor);
+  grd.addColorStop(1, sideColor);
 
 	var poly = PolyRun.add(view.id, {
 		parent: document.body,
@@ -9,16 +12,15 @@ module.exports = (view, w, h, mainColor, side) => {
 
 		generate: true,
 		autoStart: false,
-		cell: 100,
+		cell: 100*(w/720),
 		compress: 10,
 
-		vertices: [],
-		speed: 0.15,
-		probability: 3,
+		speed: 0.1,
+		probability: 10,
 		acceleration: 0.00001,
 
-		animCounterSpeed: 0.1,
-		animCounterMax: 10,
+		animCounterSpeed: 0.05,
+		animCounterMax: 3,
 
 		clear: () => {
 			ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
@@ -26,8 +28,8 @@ module.exports = (view, w, h, mainColor, side) => {
 		render: {
 			0: {
 				renderLine: (p, x1, y1, x2, y2) => {
-			    ctx.lineStyle = mainColor;
-					ctx.lineWidth = 1.5;
+			    ctx.lineStyle = grd;
+					ctx.lineWidth = 2;
 
 					ctx.beginPath();
 					ctx.moveTo(x1, y1);
@@ -35,12 +37,12 @@ module.exports = (view, w, h, mainColor, side) => {
 					ctx.stroke();
 				},
 				renderPoint: (p, x, y) => {
-					ctx.fillStyle = mainColor;
+					ctx.fillStyle = grd;
 					ctx.beginPath();
-					ctx.arc(x, y, 3, 0, 2*Math.PI);
+					ctx.arc(x, y, p.animCounter, 0, 2*Math.PI);
 					ctx.fill();
 
-					ctx.strokeStyle = mainColor;
+					ctx.strokeStyle = grd;
 					ctx.lineWidth = 2;
 
 					ctx.beginPath();
@@ -54,7 +56,7 @@ module.exports = (view, w, h, mainColor, side) => {
 	});
 
   let fx = PolyRun.effects[view.id];
-  fx.start(Math.round(w/100));
+  fx.start(Math.round(w/fx.cell));
   fx.start(0);
 
 	var loop = () => {

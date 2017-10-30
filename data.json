@@ -24,7 +24,7 @@
 			"demo": "https://github.com/AZbang/LuiPlayer/releases",
 			"label": "LuiPlayer",
 			"description": "Десктопное приложение на Electron.js для прослушивания музыки с видеохостинга YouTube. Имеет возможность сохранения треков и удобный поиск. "
-		}
+		},
 		{
 			"dir": "left",
 			"image": "https://camo.githubusercontent.com/e56bd861e3e3ebb2aae2b9d9912eab57913bfbb0/68747470733a2f2f70702e766b2e6d652f633833363732392f763833363732393639312f31373164342f6f35384a43682d5234376b2e6a7067",
@@ -51,7 +51,6 @@
 			"link": "https://telegram.me/AZbang",
 			"icon": "fa-telegram"
 		},
-
 		{
 			"link": "https://github.com/AZbang",
 			"icon": "fa-github"

@@ -60,7 +60,7 @@ section .label {
 }
 section .text {
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1.4em;
 	font-family: Roboto Light;
 	padding: 0 10%;
 }
@@ -79,6 +79,12 @@ section .text {
 /* PROJECTS LIST*/
 .project {
   padding-bottom: 36px;
+}
+.project.left > div {
+  float: left;
+}
+.project.left > div {
+  float: right;
 }
 .project .project__imagewrap {
 	/*position: relative;

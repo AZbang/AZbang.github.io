@@ -1,9 +1,7 @@
 {
 	"images": ["www/img/avatar.png", "www/img/avatar2.png", "www/img/avatar3.png", "www/img/avatar4.png"],
-	"name": "Андрей Жевлаков",
-	"label": "Web Разработчик",
 	"description": [
-		"Привет! Меня зовут Андрей Жевлаков, я занимаюсь Web’oм уже больше года и в мои интересы входит разработка веб приложений написанных на JavaScript, браузерных игр на webGL, мобильные и десктопные приложения на базе HTML5, а так же немного backend’a на Node.js."
+		"Привет! Меня зовут **Андрей Жевлаков**, я занимаюсь Web’oм уже больше года и в мои интересы входит разработка веб приложений написанных на JavaScript, браузерных игр на webGL, мобильные и десктопные приложения на базе HTML5, а так же немного backend’a на Node.js."
 	],
 	"contacts": [
 		"Если хочешь что-то спросить, то я открыт к предложениям :)",
@@ -11,33 +9,24 @@
 	],
 	"projects": [
 		{
-			"dir": 0,
-			"image": {
-				"points": [],
-				"source": "https://camo.githubusercontent.com/380975c43f9ed1ea82981fc99aab476a8f3741f0/68747470733a2f2f70356234793274362e73736c2e687763646e2e6e65742f67616d652d6865616465722f323030302f3133343238382d76707239687074642e6a7067"
-			},
+			"dir": "left",
+			"image": "https://camo.githubusercontent.com/380975c43f9ed1ea82981fc99aab476a8f3741f0/68747470733a2f2f70356234793274362e73736c2e687763646e2e6e65742f67616d652d6865616465722f323030302f3133343238382d76707239687074642e6a7067",
 			"github": "https://github.com/AZbang/LINES",
 			"demo": "",
 			"label": "LINES",
 			"description": "Геометрическая головоломка, выполненная в минималистичном стиле, в которой Вам придется использовать логику и умения решать задачи не зная поставленной цели. "
 		},
 		{
-			"dir": 1,
-			"image": {
-				"points": [],
-				"source": "https://camo.githubusercontent.com/e56bd861e3e3ebb2aae2b9d9912eab57913bfbb0/68747470733a2f2f70702e766b2e6d652f633833363732392f763833363732393639312f31373164342f6f35384a43682d5234376b2e6a7067"
-			},
+			"dir": "right",
+			"image": "https://camo.githubusercontent.com/e56bd861e3e3ebb2aae2b9d9912eab57913bfbb0/68747470733a2f2f70702e766b2e6d652f633833363732392f763833363732393639312f31373164342f6f35384a43682d5234376b2e6a7067",
 			"github": "https://github.com/AZbang/LearnWords",
 			"demo": "",
 			"label": "LearnWords",
 			"description": "Небольшой интерактивный сервис для изучения иностранных слов. Вам необходимо правильно написать слово перевод с русского на английский. Это поможет запомнить новые слова и повторить написания старых."
 		},
 		{
-			"dir": 0,
-			"image": {
-				"points": [],
-				"source": "https://camo.githubusercontent.com/e56bd861e3e3ebb2aae2b9d9912eab57913bfbb0/68747470733a2f2f70702e766b2e6d652f633833363732392f763833363732393639312f31373164342f6f35384a43682d5234376b2e6a7067"
-			},
+			"dir": "left",
+			"image": "https://camo.githubusercontent.com/e56bd861e3e3ebb2aae2b9d9912eab57913bfbb0/68747470733a2f2f70702e766b2e6d652f633833363732392f763833363732393639312f31373164342f6f35384a43682d5234376b2e6a7067",
 			"github": "https://github.com/AZbang/LearnWords",
 			"demo": "",
 			"label": "LearnWords",

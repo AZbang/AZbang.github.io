@@ -18,7 +18,9 @@
 			<section class="mui-container">
 				<div class="mui-panel">
 					<h1 class="label text-color-thief">About Me</h1>
-					<p class="text text-color-thief mui--text-title">{{description}}</p>
+					<div class="text text-color-thief mui--text-title">
+						{{#markdown descriptionMarkdown}}{{/markdown}}
+					</div>
 					<div class="links mui--text-center">
 						<ul class="list mui-list--unstyled mui-list--inline">
 							{{#links}}
@@ -35,10 +37,11 @@
 					<br>
 					<h1 class="label text-color-thief">My Projects</h1>
 					{{#each projects}}
-						<div class="mui-row project">
-							<div class="mui-col-md-4 mui-col-xs-12 mui-col-md-offset-1">
+						<div class="mui-row project {{this.dir}}">
+							<div class="mui-col-md-1"></div>
+							<div class="mui-col-md-4 mui-col-xs-12">
 								<div class="project__imagewrap">
-									<div class="project__image" style="background-image: url({{this.image.source}});"></div>
+									<div class="project__image bg-color-thief" style="background-image: url({{this.image}});"></div>
 								</div>
 							</div>
 							<div class="mui-col-md-6 mui-col-xs-12">
@@ -50,6 +53,7 @@
 								<a href="{{this.demo}}" class="mui-btn project__btn bg-color-thief">Demo</a>
 							</div>
 						</div>
+						<div class="mui-col-md-1"></div>
 						<div class="mui-divider"></div>
 					{{/each}}
 					<h1 class="label text-color-thief">Contacts</h1>
@@ -71,8 +75,8 @@
 			</section>
 		</script>
 
-		<script src="www/color-thief.js"></script>
-		<script src="www/PolyRun.js"></script>
+		<script src="www/vendor/color-thief.js"></script>
+		<script src="www/vendor/PolyRun.js"></script>
 		<script src="www/app.js"></script>
 	</body>
 </html>

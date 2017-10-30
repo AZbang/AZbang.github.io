@@ -1,5 +1,5 @@
 {
-	"images": ["www/img/avatar.png", "www/img/avatar2.png", "www/img/avatar3.png", "www/img/avatar4.png"],
+	"images": ["www/img/avatar.png", "www/img/avatar2.png", "www/img/avatar4.png"],
 	"description": [
 		"**Привет!** Меня зовут **Андрей Жевлаков**, мне 15 лет. Я занимаюсь **Web разработкой** 2 года.",
 		"За это время мне доводилось работать над __кроссплатформенными приложениями различной сложности, играми, чатботами и множеством других интересных вещей.__",

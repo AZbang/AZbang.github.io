@@ -69,24 +69,24 @@
 	],
 	"links": [
 		{
-			"link": "https://vk.com/id216312691",
-			"icon": "fa-vk"
-		},
-		{
 			"link": "https://telegram.me/AZbang",
 			"icon": "fa-instagram"
+		},
+		{
+			"link": "https://vk.com/id216312691",
+			"icon": "fa-vk"
 		},
 		{ 
 			"link": "https://twitter.com/azbang2",
 			"icon": "fa-twitter"
 		},
 		{
-			"link": "https://telegram.me/AZbang",
-			"icon": "fa-telegram"
-		},
-		{
 			"link": "https://github.com/AZbang",
 			"icon": "fa-github"
+		},
+		{
+			"link": "https://telegram.me/AZbang",
+			"icon": "fa-telegram"
 		}
 	]
 }

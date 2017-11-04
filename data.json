@@ -28,22 +28,30 @@
 		},
 		{
 			"dir": "left",
+			"image": "https://github.com/alxmamaev/image-storage/raw/master/escv/header.png",
+			"github": "https://github.com/alxmamaev/ESCV",
+			"demo": "https://github.com/alxmamaev/ESCV",
+			"label": "ESCV",
+			"description": "Электронная система учета посетителей - это совокупность программно аппаратных средств, главной задачей которых является - учет посещений какой либо организации или заведения в электронном виде."
+		},
+		{
+			"dir": "right",
 			"image": "https://camo.githubusercontent.com/e56bd861e3e3ebb2aae2b9d9912eab57913bfbb0/68747470733a2f2f70702e766b2e6d652f633833363732392f763833363732393639312f31373164342f6f35384a43682d5234376b2e6a7067",
 			"github": "https://github.com/AZbang/LearnWords",
-			"demo": "https://azbang.github.io/LearnWords ",
+			"demo": "https://azbang.github.io/LearnWords",
 			"label": "LearnWords",
 			"description": "Небольшой интерактивный сервис для изучения иностранных слов. Вам необходимо правильно написать слово перевод с русского на английский. Это поможет запомнить новые слова и повторить написания старых."
 		},
 		{
-			"dir": "right",
+			"dir": "left",
 			"image": "https://github.com/AZbang/media-storage/raw/master/BlinkShooter/gameplay.gif",
-			"github": "",
+			"github": "https://github.com/AZbang/BlinkShooter",
 			"demo": "",
 			"label": "BlinkShooter",
 			"description": "**2D Top-down шутер. PC, Mobile.** \n\n Мир выдуманный создателем живет по своим правилам, находясь в зоне комфорта, но что, если правила изменяться? **В разработке...**"
 		},
 		{
-			"dir": "left",
+			"dir": "right",
 			"image": "",
 			"github": "",
 			"demo": "",
@@ -51,7 +59,7 @@
 			"description": "Сервис динамического реестра данных о лесных массивах основанный на технологии блокчейн. Проект разрабатывается совместно с **Внешэкономбанк**. **В разработке...**"
 		},
 		{
-			"dir": "right",
+			"dir": "left",
 			"image": "",
 			"github": "",
 			"demo": "",
@@ -59,7 +67,7 @@
 			"description": "VK приложение, которое позволит администраторам групп без особого труда сделать динамическую обложку для групп. **В разработке...**"
 		},
 		{
-			"dir": "left",
+			"dir": "right",
 			"image": "",
 			"github": "",
 			"demo": "",

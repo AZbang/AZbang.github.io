@@ -2,20 +2,29 @@
 	"images": ["www/img/avatar.png", "www/img/avatar1.png", "www/img/avatar2.jpg"],
 	"projects": [
 		{
-			"dir": "right",
+			"dir": "left",
 			"image": "https://pp.userapi.com/c834302/v834302303/31cd2/znvThp769hM.jpg",
 			"github": "https://github.com/Donatelo-app/donatelo-application",
 			"demo": "https://vk.com/donatelo_app",
 			"label": "Donatelo",
 			"description": "VK приложение, которое позволит администраторам групп без особого труда сделать динамическую обложку для групп."
 		},
+
 		{
-			"dir": "left",
+			"dir": "right",
 			"image": "https://camo.githubusercontent.com/380975c43f9ed1ea82981fc99aab476a8f3741f0/68747470733a2f2f70356234793274362e73736c2e687763646e2e6e65742f67616d652d6865616465722f323030302f3133343238382d76707239687074642e6a7067",
 			"github": "https://github.com/AZbang/LINES",
 			"demo": "https://play.google.com/store/apps/details?id=com.azbang.linespro",
 			"label": "LINES",
 			"description": "Геометрическая головоломка, выполненная в минималистичном стиле, в которой Вам придется использовать логику и умения решать задачи не зная поставленной цели. "
+		},
+		{
+			"dir": "left",
+			"image": "https://pp.userapi.com/c840427/v840427972/2e888/BHhJ85ljFDY.jpg",
+			"github": "https://github.com/alxmamaev/DeForestClient",
+			"demo": "http://deforest.herokuapp.com/",
+			"label": "DeForest",
+			"description": "Сервис динамического реестра данных о лесных массивах основанный на технологии блокчейн. Проект разрабатывается совместно с **Внешэкономбанк**. **В разработке...**"
 		},
 		{
 			"dir": "right",

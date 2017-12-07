@@ -1,7 +1,7 @@
 {
-	"images": ["www/img/avatar.png", "www/img/avatar2.png", "www/img/avatar4.png"],
+	"images": ["www/img/avatar.png", "www/img/avatar2.png", "www/img/avatar4.png", "https://scontent-frt3-2.cdninstagram.com/t51.2885-15/e35/23507971_824847667697593_7206602974024433664_n.jpg"],
 	"description": [
-		"**Привет!** Меня зовут **Андрей Жевлаков**, мне 15 лет. Я занимаюсь **Web разработкой** 2 года.",
+		"**Привет!** Меня зовут **Андрей Жевлаков** и мне 15 лет. На протяжении двух лет я занимаюсь **Web разработкой**.",
 		"За это время мне доводилось работать над __кроссплатформенными приложениями различной сложности, играми, чатботами и множеством других интересных вещей.__",
 		"Мой основной стек: **Javascript (ES6), HTML5, CSS3, Node.js, Gulp, Webpack, Vue, Pixi, Phaser, Express.**",
 		"Если вас интересуют подробности моих скиллов, то Вы всегда можете связаться со мной напрямую:"
@@ -10,6 +10,14 @@
 		"## 79093284448 | azbango5@gmail.com"
 	],
 	"projects": [
+		{
+			"dir": "right",
+			"image": "https://pp.userapi.com/c841134/v841134011/42a3f/lntU9knoyqE.jpg",
+			"github": "https://github.com/Donatelo-app/donatelo-application",
+			"demo": "https://vk.com/donatelo_app",
+			"label": "Donatelo",
+			"description": "VK приложение, которое позволит администраторам групп без особого труда сделать динамическую обложку для групп. **В разработке...**"
+		},
 		{
 			"dir": "left",
 			"image": "https://camo.githubusercontent.com/380975c43f9ed1ea82981fc99aab476a8f3741f0/68747470733a2f2f70356234793274362e73736c2e687763646e2e6e65742f67616d652d6865616465722f323030302f3133343238382d76707239687074642e6a7067",
@@ -28,6 +36,14 @@
 		},
 		{
 			"dir": "left",
+			"image": "https://github.com/AZbang/media-storage/raw/master/BlinkShooter/gameplay.gif",
+			"github": "https://github.com/AZbang/BlinkShooter",
+			"demo": "",
+			"label": "BlinkShooter",
+			"description": "**2D Top-down шутер. PC, Mobile.** \n\n Мир выдуманный создателем живет по своим правилам, находясь в зоне комфорта, но что, если правила изменяться? **В разработке...**"
+		},
+		{
+			"dir": "right",
 			"image": "https://github.com/alxmamaev/image-storage/raw/master/escv/header.png",
 			"github": "https://github.com/alxmamaev/ESCV",
 			"demo": "https://github.com/alxmamaev/ESCV",
@@ -41,30 +57,6 @@
 			"demo": "https://azbang.github.io/LearnWords",
 			"label": "LearnWords",
 			"description": "Небольшой интерактивный сервис для изучения иностранных слов. Вам необходимо правильно написать слово перевод с русского на английский. Это поможет запомнить новые слова и повторить написания старых."
-		},
-		{
-			"dir": "left",
-			"image": "https://github.com/AZbang/media-storage/raw/master/BlinkShooter/gameplay.gif",
-			"github": "https://github.com/AZbang/BlinkShooter",
-			"demo": "",
-			"label": "BlinkShooter",
-			"description": "**2D Top-down шутер. PC, Mobile.** \n\n Мир выдуманный создателем живет по своим правилам, находясь в зоне комфорта, но что, если правила изменяться? **В разработке...**"
-		},
-		{
-			"dir": "right",
-			"image": "",
-			"github": "",
-			"demo": "",
-			"label": "DeForest",
-			"description": "Сервис динамического реестра данных о лесных массивах основанный на технологии блокчейн. Проект разрабатывается совместно с **Внешэкономбанк**. **В разработке...**"
-		},
-		{
-			"dir": "left",
-			"image": "",
-			"github": "",
-			"demo": "",
-			"label": "Donatelo",
-			"description": "VK приложение, которое позволит администраторам групп без особого труда сделать динамическую обложку для групп. **В разработке...**"
 		},
 		{
 			"dir": "right",

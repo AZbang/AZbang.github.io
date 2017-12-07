@@ -1,14 +1,5 @@
 {
-	"images": ["www/img/avatar.png", "www/img/avatar2.png", "www/img/avatar4.png", "https://scontent-frt3-2.cdninstagram.com/t51.2885-15/e35/23507971_824847667697593_7206602974024433664_n.jpg"],
-	"description": [
-		"**Привет!** Меня зовут **Андрей Жевлаков** и мне 15 лет. На протяжении двух лет я занимаюсь **Web разработкой**.",
-		"За это время мне доводилось работать над __кроссплатформенными приложениями различной сложности, играми, чатботами и множеством других интересных вещей.__",
-		"Мой основной стек: **Javascript (ES6), HTML5, CSS3, Node.js, Gulp, Webpack, Vue, Pixi, Phaser, Express.**",
-		"Если вас интересуют подробности моих скиллов, то Вы всегда можете связаться со мной напрямую:"
-	],
-	"contacts": [
-		"## 79093284448 | azbango5@gmail.com"
-	],
+	"images": ["www/img/avatar.png", "www/img/avatar1.png", "www/img/avatar2.jpg"],
 	"projects": [
 		{
 			"dir": "right",
@@ -76,7 +67,7 @@
 			"link": "https://vk.com/id216312691",
 			"icon": "fa-vk"
 		},
-		{ 
+		{
 			"link": "https://twitter.com/azbang_",
 			"icon": "fa-twitter"
 		},

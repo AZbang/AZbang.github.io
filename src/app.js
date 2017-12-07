@@ -8,8 +8,6 @@ Handlebars.registerHelper('markdown', require('helper-markdown'));
 
 $(() => {
 	$.getJSON("./data.json", (data) => {
-		data.descriptionMarkdown = data.description.join('\n\n');
-		data.contactsMarkdown = data.contacts.join('\n\n');
 		data.image = data.images[Math.floor(Math.random()*data.images.length)];
 
 		var source = $("#template").html();

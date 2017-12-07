@@ -51,7 +51,7 @@
 			"description": "Электронная система учета посетителей - это совокупность программно аппаратных средств, главной задачей которых является - учет посещений какой либо организации или заведения в электронном виде."
 		},
 		{
-			"dir": "right",
+			"dir": "left",
 			"image": "https://camo.githubusercontent.com/e56bd861e3e3ebb2aae2b9d9912eab57913bfbb0/68747470733a2f2f70702e766b2e6d652f633833363732392f763833363732393639312f31373164342f6f35384a43682d5234376b2e6a7067",
 			"github": "https://github.com/AZbang/LearnWords",
 			"demo": "https://azbang.github.io/LearnWords",

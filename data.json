@@ -12,11 +12,11 @@
 	"projects": [
 		{
 			"dir": "right",
-			"image": "https://pp.userapi.com/c841134/v841134011/42a3f/lntU9knoyqE.jpg",
+			"image": "https://pp.userapi.com/c834302/v834302303/31cd2/znvThp769hM.jpg",
 			"github": "https://github.com/Donatelo-app/donatelo-application",
 			"demo": "https://vk.com/donatelo_app",
 			"label": "Donatelo",
-			"description": "VK приложение, которое позволит администраторам групп без особого труда сделать динамическую обложку для групп. **В разработке...**"
+			"description": "VK приложение, которое позволит администраторам групп без особого труда сделать динамическую обложку для групп."
 		},
 		{
 			"dir": "left",

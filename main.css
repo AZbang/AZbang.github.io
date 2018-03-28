@@ -10,24 +10,17 @@ section {
 	margin-top: 10%;
 }
 
-#background {
+#background, #blur{
 	position: fixed;
 	top: 0;
 	left: 0;
 }
-#imageblur {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  filter: opacity(.2) blur(15px);
-  left: 0;
-  background-size: cover;
-  background-position: center;
+#blur {
+	opacity: .2;
 }
 
 .mui-panel {
-	padding-bottom: 50px;
+	padding-bottom: 0;
 	margin-bottom: 10%;
 	border-radius: 3px;
 	border-top: 3px solid #333;
@@ -46,10 +39,10 @@ section {
 }
 
 @media only screen and (max-width: 520px) {
-		.avatar {
-			width: 200px;
-			height: 200px;
-    }
+	.avatar {
+		width: 200px;
+		height: 200px;
+  }
 }
 
 /* UI ELEMENTS*/
@@ -84,6 +77,9 @@ section .text {
 }
 .project.left > div {
   float: right;
+}
+.project__description {
+	margin-bottom: 5px;
 }
 .project .project__imagewrap {
   margin-top: 25px;

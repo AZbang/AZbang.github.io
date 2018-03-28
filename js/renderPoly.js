@@ -1,8 +1,10 @@
-module.exports = (view, w, h, mainColor, sideColor) => {
+window.renderPoly = function(viewId, w, h, mainColor, sideColor) {
+  var view = document.getElementById(viewId);
   view.width = w;
 	view.height = h;
 	var ctx = view.getContext('2d');
   var grd = ctx.createRadialGradient(w/2, h/10+200, w/10, w/2, 200, w);
+  var lineWidth = w/1024;
   grd.addColorStop(0, mainColor);
   grd.addColorStop(1, sideColor);
 
@@ -29,7 +31,7 @@ module.exports = (view, w, h, mainColor, sideColor) => {
 			0: {
 				renderLine: (p, x1, y1, x2, y2) => {
 			    ctx.lineStyle = grd;
-					ctx.lineWidth = 2;
+					ctx.lineWidth = lineWidth;
 
 					ctx.beginPath();
 					ctx.moveTo(x1, y1);
@@ -43,7 +45,7 @@ module.exports = (view, w, h, mainColor, sideColor) => {
 					ctx.fill();
 
 					ctx.strokeStyle = grd;
-					ctx.lineWidth = 2;
+					ctx.lineWidth = lineWidth;
 
 					ctx.beginPath();
 

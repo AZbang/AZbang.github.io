@@ -6,7 +6,16 @@ new Vue({
     images: [],
     mainColor: '#333',
     sideColor: '#333',
-    projects: [{
+    projects: [
+      {
+  			"dir": "right",
+  			"image": "https://github.com/AZbang/media-storage/raw/master/Molecules/screen.png",
+  			"github": "https://github.com/AZbang/Molecules",
+  			"demo": "https://play.google.com/store/apps/details?id=com.azbango.molecules",
+  			"label": "Molecules",
+  			"description": "Данное приложение поможет изучить химические вещества в интерактивной форме"
+  		},
+      {
   			"dir": "left",
   			"image": "https://pp.userapi.com/c834302/v834302303/31cd2/znvThp769hM.jpg",
   			"github": "https://github.com/Donatelo-app/donatelo-application",
